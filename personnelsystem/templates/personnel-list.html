@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}
+    Staff
+{% endblock %}
+
+{% block content %}
+    <table>
+    <th>Our Staff</th>
+        {% for person in personnel %}
+            <tr>
+                <td>{{ person }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

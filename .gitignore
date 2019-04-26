@@ -1,0 +1,6 @@
+venv
+venv/
+cires/__pycache__
+personnelsystem/__pycache__
+.idea/
+.idea

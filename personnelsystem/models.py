@@ -10,7 +10,7 @@ from django.db import models
 class Personnel(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    employee_number = models.IntegerField()
+    employee_number = models.IntegerField(unique=True)
     academic_qualification = models.CharField(max_length=50)
 
 

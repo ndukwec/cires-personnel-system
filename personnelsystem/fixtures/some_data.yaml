@@ -1,0 +1,7 @@
+- model: personnelsystem.Personnel
+  pk: 1
+  fields:
+    first_name: David
+    last_name: Attenborough
+    employee_number: 111
+    academic_qualification: PhD

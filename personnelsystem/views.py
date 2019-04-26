@@ -4,6 +4,5 @@ from django.shortcuts import render
 
 
 def index(request):
-    from django.http import HttpResponse
-    return HttpResponse("welcome to the personnel page")
+    return render(request, 'index.html', {'context': 'homepage'})
 

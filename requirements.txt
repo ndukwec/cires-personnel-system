@@ -1,2 +1,4 @@
 django==2.2
 psycopg2-binary==2.8.2
+django-bootstrap4==0.0.8
+pyyaml==5.1

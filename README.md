@@ -9,7 +9,7 @@ and academic qualification attributes.
 
 **To run this project, do the following:**
 
-**a.) Make sure you have Python installed**
+**a.) Make sure you have Python 3 installed**
 
 **b.) Make sure you have Postgres installed**
     **b.1) Make sure you have created a user in your database with name 'cires' and password 'notsosecurepassword1!'**

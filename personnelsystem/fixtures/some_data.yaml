@@ -5,17 +5,24 @@
     last_name: Attenborough
     employee_number: 111
     academic_qualification: PhD
-- model: personnelsystem.Personnel
+- model: personnelsystem.personnel
   pk: 2
   fields:
     first_name: Sylvia
     last_name: Murphy
     employee_number: 112
     academic_qualification: MA, MS and BA
-- model: personnelsystem.Personnel
+- model: personnelsystem.personnel
   pk: 3
   fields:
     first_name: Chinedu
     last_name: Amadi-Ndukwe
     employee_number: 250
     academic_qualification: BSc (Honours)
+- model: personnelsystem.personnel
+  pk: 4
+  fields:
+    first_name: Tim
+    last_name: Cook
+    employee_number: 200
+    academic_qualification: MBA

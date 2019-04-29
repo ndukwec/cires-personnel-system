@@ -16,6 +16,7 @@
                     <th scope="col">Academic Qualification</th>
                 </tr>
                 </thead>
+            <tbody>
                 {% for person in personnel %}
                     <tr>
                         <td>{{ person.first_name }}</td>
@@ -24,5 +25,6 @@
                         <td>{{ person.academic_qualification }}</td>
                     </tr>
                 {% endfor %}
+            </tbody>
             </table>
 {% endblock %}

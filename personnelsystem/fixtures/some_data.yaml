@@ -5,6 +5,7 @@
     last_name: Attenborough
     employee_number: 111
     academic_qualification: PhD
+
 - model: personnelsystem.personnel
   pk: 2
   fields:
@@ -12,6 +13,7 @@
     last_name: Murphy
     employee_number: 112
     academic_qualification: MA, MS and BA
+
 - model: personnelsystem.personnel
   pk: 3
   fields:

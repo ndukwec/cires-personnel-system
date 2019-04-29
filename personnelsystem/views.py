@@ -47,7 +47,3 @@ def edit_personnel(request, pk):
     return render(request, 'personnel-edit.html', {'form': form})
 
 
-def delete_personnel(request, pk=1):
-    personnel = get_object_or_404(Personnel, pk=pk)
-    from django.http import HttpResponse
-    return HttpResponse("Deleting personnel with id: " + str(personnel.id))

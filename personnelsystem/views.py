@@ -20,6 +20,11 @@ class PersonnelListView(ListView):
     ordering = ['last_name']
 
 
+"""
+    views below will handle the editing and deletion of a personnel object via its primary key
+"""
+
+
 def edit_personnel(request, pk=1):
     personnel = get_object_or_404(Personnel, pk=pk)
     from django.http import HttpResponse

@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView
 from personnelsystem.models import Personnel
+from .forms import PersonnelForm
 
 
 def index(request):
@@ -25,10 +26,24 @@ class PersonnelListView(ListView):
 """
 
 
-def edit_personnel(request, pk=1):
+def edit_personnel(request, pk):
+    # For debugging
+    # personnel = get_object_or_404(Personnel, pk=pk)
+    # from django.http import HttpResponse
+    # return HttpResponse("Editing personnel with id: " + str(personnel.id))
+    # For debugging
+
+    # Code below do the actual work of updating the person and saving it to our db.
     personnel = get_object_or_404(Personnel, pk=pk)
-    from django.http import HttpResponse
-    return HttpResponse("Editing personnel with id: " + str(personnel.id))
+    if request.method == "POST":
+        form = PersonnelForm(request.POST, instance=personnel)
+        if form.is_valid():
+            personnel = form.save(commit=False)
+            personnel.save()
+            return redirect('personnel-list')
+    else:
+        form = PersonnelForm()
+    return render(request, 'personnel-edit.html', {'form': form})
 
 
 def delete_personnel(request, pk=1):

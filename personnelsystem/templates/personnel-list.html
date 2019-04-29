@@ -7,24 +7,30 @@
 
 {% block content %}
     <h3>Our Staff</h3>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Employee Number</th>
-                    <th scope="col">Academic Qualification</th>
-                </tr>
-                </thead>
-            <tbody>
-                {% for person in personnel %}
-                    <tr>
-                        <td>{{ person.first_name }}</td>
-                        <td>{{ person.last_name }}</td>
-                        <td>{{ person.employee_number }}</td>
-                        <td>{{ person.academic_qualification }}</td>
-                    </tr>
-                {% endfor %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Employee Number</th>
+            <th scope="col">Academic Qualification</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for person in personnel %}
+            <tr>
+                <td>{{ person.first_name }}</td>
+                <td>{{ person.last_name }}</td>
+                <td>{{ person.employee_number }}</td>
+                <td>{{ person.academic_qualification }}</td>
+                <td><a class="btn btn-warning" href="{%  url 'personnel-edit' person.id %}">Edit</a></td>
+                <td><a class="btn btn-danger" href="{%  url 'personnel-delete' person.id %}">Delete</a></td>
+            </tr>
+        {% endfor %}
             </tbody>
             </table>
+            <div class="text-right">
+            </div>
 {% endblock %}

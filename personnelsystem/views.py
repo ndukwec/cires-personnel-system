@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 from personnelsystem.models import Personnel
 
@@ -18,4 +18,16 @@ class PersonnelListView(ListView):
     context_object_name = 'personnel'
     paginate_by = 10
     ordering = ['last_name']
+
+
+def edit_personnel(request, pk=1):
+    personnel = get_object_or_404(Personnel, pk=pk)
+    from django.http import HttpResponse
+    return HttpResponse("Editing personnel with id: " + str(personnel.first_name))
+
+
+def delete_personnel(request, pk=1):
+    personnel = get_object_or_404(Personnel, pk=pk)
+    from django.http import HttpResponse
+    return HttpResponse("Deleting personnel with id: " + str(personnel.first_name))
 

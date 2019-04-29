@@ -23,11 +23,11 @@ class PersonnelListView(ListView):
 def edit_personnel(request, pk=1):
     personnel = get_object_or_404(Personnel, pk=pk)
     from django.http import HttpResponse
-    return HttpResponse("Editing personnel with id: " + str(personnel.first_name))
+    return HttpResponse("Editing personnel with id: " + str(personnel.id))
 
 
 def delete_personnel(request, pk=1):
     personnel = get_object_or_404(Personnel, pk=pk)
     from django.http import HttpResponse
-    return HttpResponse("Deleting personnel with id: " + str(personnel.first_name))
+    return HttpResponse("Deleting personnel with id: " + str(personnel.id))
 

@@ -5,6 +5,7 @@
     last_name: Attenborough
     employee_number: 111
     academic_qualification: PhD
+
 - model: personnelsystem.personnel
   pk: 2
   fields:
@@ -12,13 +13,14 @@
     last_name: Murphy
     employee_number: 112
     academic_qualification: MA, MS and BA
+
 - model: personnelsystem.personnel
   pk: 3
   fields:
     first_name: Chinedu
     last_name: Amadi-Ndukwe
     employee_number: 250
-    academic_qualification: BSc (Honours)
+    academic_qualification: BS
 - model: personnelsystem.personnel
   pk: 4
   fields:
@@ -26,3 +28,51 @@
     last_name: Cook
     employee_number: 200
     academic_qualification: MBA
+
+- model: personnelsystem.personnel
+  pk: 5
+  fields:
+    first_name: Steve
+    last_name: Jobs
+    employee_number: 600
+    academic_qualification: BS
+
+- model: personnelsystem.personnel
+  pk: 6
+  fields:
+    first_name: Linus
+    last_name: Torvalds
+    employee_number: 900
+    academic_qualification: BS
+
+- model: personnelsystem.personnel
+  pk: 7
+  fields:
+    first_name: David
+    last_name: Cameron
+    employee_number: 444
+    academic_qualification: MBA
+
+- model: personnelsystem.personnel
+  pk: 8
+  fields:
+    first_name: James Earl
+    last_name: Jones
+    employee_number: 555
+    academic_qualification: BS
+
+- model: personnelsystem.personnel
+  pk: 9
+  fields:
+    first_name: Luke
+    last_name: Skywalker
+    employee_number: 888
+    academic_qualification: PhD
+
+- model: personnelsystem.personnel
+  pk: 10
+  fields:
+    first_name: Arnold
+    last_name: Schwarzenegger
+    employee_number: 999
+    academic_qualification: BA

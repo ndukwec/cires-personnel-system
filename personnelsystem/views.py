@@ -38,7 +38,8 @@ def edit_personnel(request, pk):
     if request.method == "POST":
         form = PersonnelForm(request.POST, instance=personnel)
         if form.is_valid():
-            personnel = form.save(commit=False)
+            personnel = form.save(commit=False)  # Commit is set to false to allow us to do more custom processing to
+            # the personnel instance if we wish
             personnel.save()
             return redirect('personnel-list')
     else:
@@ -50,4 +51,3 @@ def delete_personnel(request, pk=1):
     personnel = get_object_or_404(Personnel, pk=pk)
     from django.http import HttpResponse
     return HttpResponse("Deleting personnel with id: " + str(personnel.id))
-
